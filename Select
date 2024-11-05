@@ -9,3 +9,20 @@
            ), 60), 2, '0') AS DIFERENCA_HHMM INTO P_DIFERENCA
         FROM AD_APONTAMENTO APO WHERE APO.NROUNICO = P_NUMUNICOAPO;
          /**/
+
+
+
+
+
+result = $valorCampo;
+if(result == null)
+{return java.math.BigDecimal.ZERO;}
+return result;
+
+
+
+if($col_KMINICIAL == null || $col_KMFINAL == null){
+    return null;
+} else {
+    return $col_KMFINAL.subtract($col_KMINICIAL);
+}
